@@ -14,7 +14,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
 
     const data = await response.json();
     if (response.ok) {
-        localStorage.setItem('token', data.data); // JWT'yi sakla
+        localStorage.setItem('token', data.data); 
         document.getElementById('response').innerText = 'Login successful!';
     } else {
         document.getElementById('response').innerText = 'Login failed: ' + data.message;

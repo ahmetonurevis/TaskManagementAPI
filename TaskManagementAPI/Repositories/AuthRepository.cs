@@ -30,7 +30,7 @@ namespace TaskManagementAPI.Repositories
                 };
             }
 
-            // Şifreyi düz bir string olarak saklıyoruz.
+            
             user.Password = password;
 
             _context.Users.Add(user);
@@ -52,7 +52,7 @@ namespace TaskManagementAPI.Repositories
                 return new ServiceResponse<string> { Success = false, Message = "Şifre yanlış." };
             }
 
-            // JWT Token oluşturma işlemi
+            
             string token = CreateToken(user);
             return new ServiceResponse<string> { Data = token, Success = true };
         }

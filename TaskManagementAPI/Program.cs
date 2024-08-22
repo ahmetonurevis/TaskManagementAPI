@@ -33,18 +33,18 @@ builder.Services.AddAuthorization(options =>
 });
 
 
-// Veritabaný baðlantýsý için DbContext ekliyoruz
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Diðer servisleri ekliyoruz
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// HTTP request pipeline yapýlandýrmasý
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

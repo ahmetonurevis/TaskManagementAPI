@@ -9,7 +9,7 @@ namespace TaskManagementAPI.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
-        public DbSet<ProjectTask> ProjectTasks { get; set; } // Task yerine ProjectTask
+        public DbSet<ProjectTask> ProjectTasks { get; set; } 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

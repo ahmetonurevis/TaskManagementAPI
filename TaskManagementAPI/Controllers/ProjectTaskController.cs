@@ -16,14 +16,14 @@ namespace TaskManagementAPI.Controllers
             _context = context;
         }
 
-        // GET: api/ProjectTask
+       
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProjectTask>>> GetProjectTasks()
         {
             return await _context.ProjectTasks.ToListAsync();
         }
 
-        // GET: api/ProjectTask/5
+       
         [HttpGet("{id}")]
         public async Task<ActionResult<ProjectTask>> GetProjectTask(int id)
         {
@@ -37,7 +37,7 @@ namespace TaskManagementAPI.Controllers
             return projectTask;
         }
 
-        // POST: api/ProjectTask
+        
         [HttpPost]
         public async Task<ActionResult<ProjectTask>> PostProjectTask(ProjectTask projectTask)
         {
@@ -47,7 +47,7 @@ namespace TaskManagementAPI.Controllers
             return CreatedAtAction(nameof(GetProjectTask), new { id = projectTask.ProjectTaskId }, projectTask);
         }
 
-        // PUT: api/ProjectTask/5
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProjectTask(int id, ProjectTask projectTask)
         {
@@ -77,7 +77,7 @@ namespace TaskManagementAPI.Controllers
             return NoContent();
         }
 
-        // DELETE: api/ProjectTask/5
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProjectTask(int id)
         {
