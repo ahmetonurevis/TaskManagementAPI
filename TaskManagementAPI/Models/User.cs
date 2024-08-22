@@ -8,12 +8,9 @@ namespace TaskManagementAPI.Models
 
         [Required]
         public string Username { get; set; }
-
+        
         [Required]
-        public byte[] PasswordHash { get; set; }
-
-        [Required]
-        public byte[] PasswordSalt { get; set; }
+        public string Password{ get; set; }
 
         [Required]
         public string Role { get; set; }
